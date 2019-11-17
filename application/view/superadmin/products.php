@@ -52,7 +52,7 @@
                                 echo "<td>" . $row['username'] . "</td>";
 //                                echo "<td>" . $row['created_at'] . "</td>";
                                 /** @var TYPE_NAME $ */
-                                echo "<td class='text-center'>".'<img class="img-responsive " width="90px" src="../assets/products/'.$row['filename'].'">'."</td>";
+                                echo "<td class='text-center'>".'<img class="img-responsive " width="90px" src="assets/products/'.$row['filename'].'">'."</td>";
 //                                echo "<td>" . $row['email'] . "</td>";
 //
                                 echo "<td class='text-center'>" . "<a class=\"btn btn-sm btn-outline-danger\" onclick=\"return confirm('tem certeza que deseja apagar?');\" href='delete_product?id=$row_id'> <i class=\"fa fa-fw fa-trash\"> </i></a>" . " - " . "<a class='btn btn-sm btn-outline-primary' href='#'> <i class='fa fa-pencil-alt'> </i> </a>" . "</td>";
