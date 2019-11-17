@@ -57,7 +57,7 @@
 
                                     <a href="view-product?id=<?php echo $row_id ?>">
                                         <img class="card-img-top rounded-top product-img"
-                                             src="<?php echo '../assets/products/' . $row['filename'] ?>"
+                                             src="<?php echo 'assets/products/' . $row['filename'] ?>"
                                              alt="Card image cap">
                                     </a>
                                 </div>

@@ -15,37 +15,27 @@
 
 #	Admin Views
 	RewriteRule ^suadmin/?$ application/view/superadmin/index.php [NC,L]
-	RewriteRule ^suadmin/home?$ application/view/superadmin/index.php [NC,L]
-	RewriteRule ^suadmin/users/?$ application/view/superadmin/users.php [NC,L]
-	RewriteRule ^suadmin/products/?$ application/view/superadmin/products.php [NC,L]
-	RewriteRule ^suadmin/categories/?$ application/view/superadmin/categories.php [NC,L]
-	RewriteRule ^suadmin/hostel/?$ application/view/superadmin/hostel.php [NC,L]
+
+	RewriteRule ^users/?$ application/view/superadmin/users.php [NC,L]
+	RewriteRule ^products/?$ application/view/superadmin/products.php [NC,L]
+	RewriteRule ^categories/?$ application/view/superadmin/categories.php [NC,L]
+	RewriteRule ^hostel/?$ application/view/superadmin/hostel.php [NC,L]
 
 
 #	Admin Controllers
-    RewriteRule ^suadmin/create_category/?$ application/controller/superadmin/create_category.php [NC,L]
-    RewriteRule ^suadmin/create_hostel/?$ application/controller/superadmin/edit_hostel.php [NC,L]
-    RewriteRule ^suadmin/delete_category/?$ application/controller/superadmin/delete_category.php [NC,L]
-    RewriteRule ^suadmin/delete_hostel/?$ application/controller/superadmin/delete_hostel.php [NC,L]
-    RewriteRule ^suadmin/delete_product/?$ application/controller/superadmin/delete_product.php [NC,L]
-    RewriteRule ^suadmin/delete_user/?$ application/controller/superadmin/delete_user.php [NC,L]
-    RewriteRule ^suadmin/edit_hostel/?$ application/controller/superadmin/edit_hostel.php [NC,L]
-    RewriteRule ^suadmin/edit_user/?$ application/controller/superadmin/edit_user.php [NC,L]
-    RewriteRule ^suadmin/edit_category/?$ application/controller/superadmin/edit_category.php [NC,L]
+    RewriteRule ^create_category/?$ application/controller/superadmin/create_category.php [NC,L]
+    RewriteRule ^create_hostel/?$ application/controller/superadmin/edit_hostel.php [NC,L]
+    RewriteRule ^delete_category/?$ application/controller/superadmin/delete_category.php [NC,L]
+    RewriteRule ^delete_hostel/?$ application/controller/superadmin/delete_hostel.php [NC,L]
+    RewriteRule ^delete_product/?$ application/controller/superadmin/delete_product.php [NC,L]
+    RewriteRule ^delete_user/?$ application/controller/superadmin/delete_user.php [NC,L]
+    RewriteRule ^edit_hostel/?$ application/controller/superadmin/edit_hostel.php [NC,L]
+    RewriteRule ^edit_user/?$ application/controller/superadmin/edit_user.php [NC,L]
+    RewriteRule ^edit_category/?$ application/controller/superadmin/edit_category.php [NC,L]
 
 #Assets
 RewriteRule ^assets/?$ ../assets [NC,L]
 
-
-
-
-
-	RewriteRule ^login/?$ application/controller/admin/login.php [NC,L]
-	RewriteRule ^logout/?$ application/controller/admin/logout.php [NC,L]
-	RewriteRule ^dashboard/?$ application/controller/admin/dashboard.php [NC,L]
-	RewriteRule ^new-product/?$ application/controller/admin/new-product.php [NC,L]
-	RewriteRule ^all-products/?$ application/controller/admin/all-products.php [NC,L]
-	RewriteRule ^delete-product/?$ application/controller/admin/delete-product.php [NC,L]
 	
 </IfModule>
 
