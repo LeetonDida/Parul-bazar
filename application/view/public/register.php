@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<?php
+	include($_SERVER['DOCUMENT_ROOT'].'/parul-bazar/config/connection.php');
+?>
+
 <html lang="en">
 
 <head>
@@ -25,7 +30,7 @@
                 <p class="text-success text-center" id="message">
 
                 </p>
-                <form id="registerForm" action="login" method="post">
+                <form id="registerForm" action="application/controller/registration.php" method="post">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstName">First name</label>
@@ -56,6 +61,28 @@
                         (Please select any Username of your choice)
                     </div>
 
+							<div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="room_no">Room Number</label>
+                            <input id="room_no" class="form-control" placeholder="" type="text" required pattern=".{2,}" maxlength="3" name="room_no" value="" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="hostel">Hostel</label>
+										<select name="hostel" id="hostel" class="form-control">
+													<?php 
+														//display list of hostels in the database
+														$sql = "SELECT * FROM hostel";
+														$result = mysqli_query($conn,$sql);
+														while ($row = mysqli_fetch_array($result))
+														{
+															echo "<option value='" . $row['id'] ."'>".$row['name']."</option>";
+														}
+													?>
+											</select>
+										<!--<input id="hostel" class="form-control" type="password" maxlength="30" required name="confirmation" value="" />-->
+                        </div>
+                    </div>
+							
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="password">Password (min. of 8 Cha.)</label>
@@ -66,6 +93,7 @@
                             <input id="confirmation" class="form-control" type="password" maxlength="30" required name="confirmation" value="" />
                         </div>
                     </div>
+							
                     <div class="form-row">
                     <div class="form-group col-md-12">
                         <input type="submit" id="submit" class="btn btn-outline-success" name="submit" value="Sign Up" />
