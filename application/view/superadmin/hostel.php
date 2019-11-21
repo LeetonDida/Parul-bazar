@@ -109,11 +109,11 @@
 
 <?php include_once('../layouts/super_admin_footer.php') ?>
 
-<div class="modal fade" id="create_hostel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="create_hostel" tabindex="-1" role="dialog" aria-labelledby="create_hostel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Creating Hostel</h5>
+                <h5 class="modal-title" id="">Creating Hostel</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -127,7 +127,7 @@
                         </div>
                     </div>
 
-                    <button href="#" type="submit" class="btn btn-primary btn-user btn-block">
+                    <button type="submit" class="btn btn-primary btn-user btn-block">
                         <i class="fa fa-check"> </i>  Create
                     </button>
                 </form>

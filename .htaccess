@@ -24,7 +24,7 @@
 
 #	Admin Controllers
     RewriteRule ^create_category/?$ application/controller/superadmin/create_category.php [NC,L]
-    RewriteRule ^create_hostel/?$ application/controller/superadmin/edit_hostel.php [NC,L]
+    RewriteRule ^create_hostel/?$ application/controller/superadmin/create_hostel.php [NC,L]
     RewriteRule ^delete_category/?$ application/controller/superadmin/delete_category.php [NC,L]
     RewriteRule ^delete_hostel/?$ application/controller/superadmin/delete_hostel.php [NC,L]
     RewriteRule ^delete_product/?$ application/controller/superadmin/delete_product.php [NC,L]
