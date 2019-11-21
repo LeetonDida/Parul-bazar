@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php include_once ('../layouts/header.php') ?>
 <?php include_once ('../layouts/pagination.php');
  $search=filter_input(INPUT_POST,'search', FILTER_SANITIZE_STRING);?>
