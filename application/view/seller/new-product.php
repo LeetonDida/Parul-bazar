@@ -1,4 +1,14 @@
 <?php session_start(); ?>
+<?php
+if(isset($_SESSION['name'])) {
+	}
+	else
+	{
+		echo '<script>alert("Login in first")</script>'; 
+		//header("refresh:0;url=login");
+		header('Location: login');
+	}
+?>
 <?php include_once('../layouts/header.php') ?>
 
 
