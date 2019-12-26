@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php session_start(); 
+?>
 <?php
 if(isset($_SESSION['name'])) {
 	}
@@ -8,6 +9,9 @@ if(isset($_SESSION['name'])) {
 		//header("refresh:0;url=login");
 		header('Location: login');
 	}
+?>
+<?php
+	include($_SERVER['DOCUMENT_ROOT'].'/parul-bazar/config/connection.php');
 ?>
 <?php include_once('../layouts/header.php') ?>
 
@@ -26,7 +30,7 @@ if(isset($_SESSION['name'])) {
                             <h1 class="h4 text-gray-900 mb-4">Create the Product!</h1>
                         </div>
 
-                        <form class="user">
+                        <form action="application/controller/new-product.php" method="post" class="user" enctype="multipart/form-data">
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="text" class="form-control" required maxlength="50" id="productName"
@@ -36,9 +40,15 @@ if(isset($_SESSION['name'])) {
                                     <select name="category_id" class="form-control " id="category">
                                         <option value="">--Category--</option>
                                         <?php global $categories; ?>
-                                        <?php foreach ($categories as $category) { ?>
-                                            <option value="<?php echo $category["id"]; ?>"><?php echo $category["value"]; ?></option>
-                                        <?php } ?>
+                                       <?php 
+														//display list of hostels in the database
+														$sql = "SELECT * FROM categories";
+														$result = mysqli_query($conn,$sql);
+														while ($row = mysqli_fetch_array($result))
+														{
+															echo "<option value='" . $row['id'] ."'>".$row['category']."</option>";
+														}
+													?>
                                     </select>
                                 </div>
                             </div>
@@ -67,7 +77,7 @@ if(isset($_SESSION['name'])) {
 
                             <div class="form-group">
                                     <label for="product_photo">Select a photo</label>
-                                    <input type="file" class="form-control-file" name="file_upload" required /><br />
+                                    <input type="file" class="form-control-file" name="file_upload" id="file_upload" required /><br />
                                 Max image size should be less than 5 MB.</p>
                             </div>
 
