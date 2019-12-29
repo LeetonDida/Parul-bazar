@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-	include($_SERVER['DOCUMENT_ROOT'].'/parul-bazar/config/connection.php');
+include_once('../../../config/connection.php') ;
 ?>
 
 <html lang="en">

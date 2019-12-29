@@ -74,19 +74,10 @@
             </div>
         </li>
 
-        <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+            <a class="nav-link" href="products">
                 <i class="fas fa-fw fa-box"></i>
-                <span>Products</span>
-            </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Painel of Products:</h6>
-                    <a class="collapse-item text-primary" href="products"><i class="fa fa-fw fa-list"></i> List</a>
-                    <a class="collapse-item text-info" href="#"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                </div>
-            </div>
+                <span>Products</span></a>
         </li>
 
         <!-- Divider -->

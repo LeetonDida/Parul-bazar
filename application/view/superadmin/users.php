@@ -66,7 +66,7 @@
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="edit_category">Editing User - <?php $row['id'] ?></h5>
+                                                <h5 class="modal-title" id="edit_category">Editing User -<span class="font-bold"> <?php echo $row['first_name']; ?></span></h5>
                                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">×</span>
                                                 </button>
@@ -92,33 +92,7 @@
                                                             <label for="room_no"> Room No.</label>
                                                             <input class="form-control" name="room_no" value="<?php echo $row['room_no']; ?>"><br>
                                                         </div>
-<!--                                                        <div class="col-sm-6">-->
-<!--                                                            <label for="hostel_name"> Hostel </label>-->
-<!--                                                            <select class="form-control" name="select_hostel">-->
-<!--                                                                <option>-->
-<!--                                                                    --><?php
-//                                                                    $sql_hostel ="Select * from hostel";
-//                                                                    $result_hostel = mysqli_query($conn, $sql_hostel);
-//                                                                    $row_hostel = mysqli_fetch_assoc($result_hostel);
-//                                                                    if (mysqli_num_rows($result) > 0) {
-//                                                                        while ($row_hostel = mysqli_fetch_assoc($result_hostel)) {
-//                                                                            $row_id = $row['id'];
-//                                                                            ?>
-<!---->
-<!---->
-<!--                                                                   <option value="--><?php //echo $row_hostel['name'] ?><!--"> --><?php //echo $row_hostel['name'] ?><!--</option>-->
-<!---->
-<!--                                                                            --><?php
-//                                                                        }
-//                                                                    }
-//                                                                    ?>
-<!---->
-<!---->
-<!---->
-<!--                                                                </option>-->
-<!--                                                            </select>-->
-<!--<!--                                                            <input class="form-control" name="hostel_name" value="-->--><?php ////echo $row['hostel_name']; ?><!--<!--"><br>-->-->
-<!--                                                        </div>-->
+
                                                     </div>
 
                                                     <div class="form-group row">
